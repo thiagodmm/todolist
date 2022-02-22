@@ -1,0 +1,7 @@
+Referências:
+
+https://www.w3schools.com/sql/func_mysql_datediff.asp
+
+https://www.w3schools.com/php/func_date_date_diff.asp
+
+https://www.php.net/manual/pt_BR/function.date-diff.php
