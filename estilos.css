@@ -10,6 +10,102 @@ body {
   line-height: 20px;
 }
 
+li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+input {
+  width: 250px;
+  height: 35px;
+  border-radius: 5px;
+  border: solid 1px blue;
+  padding: 8px;
+}
+
+textarea {
+  width: 350px;
+  height: 150px;
+  border-radius: 5px;
+  border: solid 1px blue;
+  padding: 8px;
+}
+
+.container {
+  display: block;
+  margin: auto;
+  width: 80%;
+}
+
+.containerLogin {
+  display: block;
+  margin: auto;
+  width: 80%;
+  padding: 25px;
+}
+
+.areaLogin {
+  margin: 10px;
+  padding: 25px;
+  border-radius: 10px;
+  display: inline-block;
+  width: 60%;
+  background-color: lightslategray;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+.txtBranco {
+  color: white;
+}
+
+.btNovaTarefa {
+  display: block;
+  margin: auto;
+  padding: 10px;
+  background-color: cornflowerblue;
+  border-radius: 10px;
+  border: solid 1px blue;
+  color: darkslategray;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  width: 220px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.btNovaTarefa:hover {
+  background-color: darkgray;
+  color: white;
+}
+
+.btLoginForm {
+  display: block;
+  margin: auto;
+  padding: 10px;
+  background-color: cornflowerblue;
+  border-radius: 10px;
+  border: solid 1px blue;
+  color: darkslategray;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  width: 140px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.btLoginForm:hover {
+  background-color: darkgray;
+  color: white;
+}
+
 .titProj {
   font-size: 32px;
   line-height: 40px;
@@ -28,19 +124,31 @@ body {
   background-color: lightgray;
 }
 
+.toDoListcontent {
+  padding: 20px;
+  border-radius: 10px;
+  display: block;
+  width: 100%;
+  background-color: white;
+}
+
 .tarefasAbertas {
+  margin: 10px;
+  padding: 15px;
   float: left;
   border-radius: 10px;
   display: block;
-  width: 50%;
-  background-color: coral;
+  width: 48%;
+  background-color: dodgerblue;
 }
 
 .tarefasFechadas {
+  margin: 10px;
+  padding: 15px;
   border-radius: 10px;
   display: inline-block;
-  width: 50%;
-  background-color: darkkhaki;
+  width: 48%;
+  background-color: lightslategray;
 }
 
 .titPrincipal {
@@ -48,6 +156,12 @@ body {
   background-color:dimgray;
   color: white;
   padding: 5px;
+}
+
+.botaoPrincipal {
+  text-align: center;
+  background-color:#e9e9e9;
+  padding: 10px;
 }
 
 .txtPadrao {
@@ -67,27 +181,26 @@ body {
   display: block;
 }
 
-
 .top {
     width: 100%;
-    height: 60px;
+    height: 50px;
     background-color: lightgray;
 }
 
 .topEsq {
   display: inline;
   width: 50%;
-  height: 60px;
+  height: 50px;
   float: left;
-  background-color: aqua;
+  background-color: lightgray;
 }
 
 .topDir {
   display: inline-block;
   width: 50%;
-  height: 60px;
+  height: 50px;
   text-align: right;
-  background-color:aquamarine;
+  background-color: darkgray;
 }
 
 .footer {
@@ -101,7 +214,7 @@ display: inline;
 float: left;
 width: 50%;
 height: 80px;
-background-color:cornflowerblue;
+background-color:#949494;
 }
 
 .footerDir {
@@ -109,16 +222,37 @@ display: inline-block;
 width: 50%;
 height: 80px;
 text-align: right;
-background-color:darkseagreen;
+background-color:darkgray;
 }
 
 
 /* Responsivo */
 
+/* Para telas menores de 1024 pixels */
+
+@media screen and (max-width: 1024px) {
+
+  .tarefasAbertas {
+    width: 40%;
+  }
+  
+  .tarefasFechadas {
+    width: 40%;
+  }
+
+}
+
 /* Para telas menores de 800 pixels */
 
 @media screen and (max-width: 800px) {
 
+  .tarefasAbertas {
+    width: 40%;
+  }
+  
+  .tarefasFechadas {
+    width: 40%;
+  }
 
 }
 
@@ -126,5 +260,16 @@ background-color:darkseagreen;
 
 @media screen and (max-width: 600px) {
 
+  .content {
+    width: 95%;
+  }
+
+  .tarefasAbertas {
+    width: 90%;
+  }
+  
+  .tarefasFechadas {
+    width: 90%;
+  }
 
 }
