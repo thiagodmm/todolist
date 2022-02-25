@@ -273,6 +273,14 @@ text-align: right;
 background-color:darkgray;
 }
 
+.tabUsers {
+  margin: auto;
+  width: 40%;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 
 /* Responsivo */
 
@@ -309,19 +317,56 @@ background-color:darkgray;
 @media screen and (max-width: 600px) {
 
   .content {
-    width: 95%;
+    width: 100%;
+    padding: 0px;
   }
 
   .tarefasAbertas {
-    width: 90%;
+    width: 100%;
+    display: block;
+    margin: auto;
   }
   
   .tarefasFechadas {
-    width: 90%;
+    width: 100%;
+    display: inline-block;
+    margin: auto;
+    margin-top: 15px;
   }
 
   .tarefas10dias {
+    width: 100%;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    width: 96%;
+  }
+  
+  .containerLogin {
     width: 90%;
+    padding: 15px;
+  }
+
+  .areaLogin {
+    margin: 0px;
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+  }
+
+  .btNovaTarefa {
+    margin: auto;
+  }
+
+  .toDoListcontent {
+    padding: 5px;
+  }
+
+  .tabUsers {
+    width: 80%;
   }
 
 }
