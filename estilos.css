@@ -179,7 +179,7 @@ textarea {
 .tarefasAbertas {
   margin: 15px;
   padding: 15px;
-  width: 100%;
+  width: 95%;
   border-radius: 10px;
   display: block;
   background-color: dodgerblue;
@@ -188,7 +188,7 @@ textarea {
 .tarefasFechadas {
   margin: 15px;
   padding: 15px;
-  width: 100%;
+  width: 95%;
   border-radius: 10px;
   display: inline-block;
   background-color: lightslategray;
@@ -198,7 +198,7 @@ textarea {
   display: block;
   margin: 15px;
   padding: 15px;
-  width: 100%;
+  width: 95%;
   border-radius: 10px;
   background-color: rgb(110, 163, 209);
 }

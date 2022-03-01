@@ -40,7 +40,7 @@ $login = new cLogin();
                 <br>
                 Ainda não possui usuário e senha?<br>
                 <br>
-                | <a href="cadUsuario.php" class="linkBranco">Cadastrar Novo Usuário</a> |</p>
+                | <a href="../view/cadUsuario.php" class="linkBranco">Cadastrar Novo Usuário</a> |</p>
         </div>
     </div>
 </body>

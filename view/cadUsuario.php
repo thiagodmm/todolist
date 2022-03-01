@@ -27,7 +27,7 @@
         session_start();
         if (isset($_SESSION['logadoN']) && $_SESSION['logadoN'] == true) {
             echo " Olá " . $_SESSION['usuarioN'] . " | ";
-            echo "<button onclick=" . "location.href='controller/logout.php'" . ">Sair</button>";
+            echo "<button onclick=" . "location.href='../controller/logout.php'" . ">Sair</button>";
         } else {
             header("Location: view/login.php");
         }
