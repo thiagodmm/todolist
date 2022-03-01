@@ -3,6 +3,7 @@
 
 <!-- PHP session_start aqui -->
 
+
 <html>
 <head>
 <html lang="pt-br">
@@ -16,8 +17,20 @@
 <div class="container">
   
     <div class="top">
-      <div class="topEsq"><h4 class="nomeUser">Olá Thiago</h4></div>
-      <div class="topDir"><a href="view/login.php" class="linkSair">Sair</a></div>
+      <div class="topEsq topLogado">
+        
+        <?php
+        session_start();
+        if (isset($_SESSION['logadoN']) && $_SESSION['logadoN'] == true) {
+            echo " Olá " . $_SESSION['usuarioN'] . " | ";
+            echo "<button onclick=" . "location.href='controller/logout.php'" . ">Sair</button>";
+        } else {
+            header("Location: view/login.php");
+        }
+        ?>
+
+<!--<h4 class="nomeUser">Olá Thiago</h4>--></div>
+      <div class="topDir"><!--<a href="view/login.php" class="linkSair">Sair</a>--></div>
     </div>
 
     <div class="titPrincipal">
@@ -26,7 +39,9 @@
     </div>
 
     <div class="botaoPrincipal">
-      <a href="nova_tarefa.html" target="_self" class="btNovaTarefa">Nova Tarefa</a>
+      <a href="html/nova_tarefa.html" target="_self" class="btNovaTarefa">Nova Tarefa</a>
+      <a href="view/cadUsuario.php" target="_self" class="btNovaTarefa">Novo Usuário</a>
+      <a href="view/listaUsuarios.php" target="_self" class="btNovaTarefa">Lista de Usuários</a>
     </div>
 
       <div class="content">

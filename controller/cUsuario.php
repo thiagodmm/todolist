@@ -23,6 +23,7 @@ class cUsuario {
             $sth->execute();
             unset($pdo);
             unset($sth);
+            header("Location: ../view/listaUsuarios.php");
         }
     }
 

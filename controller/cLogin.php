@@ -10,26 +10,26 @@ class cLogin {
     // Função Logar
     public function login() {
         if(isset($_POST['logar'])){
-            $email = $_POST['email'];
-            $pas = $_POST['pas'];
+            $usuario = $_POST['usuario'];
+            $senha = $_POST['senha'];
 
             $pdo = require '../pdo/connection.php';
-            $sql = "select * from usuario where email = ?";
+            $sql = "select * from user where usuario = ?";
             $sth = $pdo->prepare($sql);
-            $sth->execute([$email]);
+            $sth->execute([$usuario]);
             $result = $sth->fetch(PDO::FETCH_ASSOC);
             $count = $sth->rowCount();
 
             if($count > 0){
-                if(password_verify($pas, $result['pas'])){
+                if(password_verify($senha, $result['senha'])){
                     session_start();
-                    $_SESSION['usuarioN'] = $result['nomeUser'];
-                    $_SESSION['emailN'] = $result['email'];
+                    $_SESSION['usuarioN'] = $result['usuario'];
+                    $_SESSION['idN'] = $result['iduser'];
                     $_SESSION['logadoN'] = true;
                     header("Location: ../index.php");
                 }
             }else {
-                header("Location: login.php");
+                header("Location: view/login.php");
             }
             unset($sth);
             unset($pdo);

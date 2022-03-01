@@ -39,6 +39,11 @@ textarea {
   padding: 8px;
 }
 
+.topLogado {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
 .formTable {
   margin: auto;
 }
@@ -82,8 +87,9 @@ textarea {
 }
 
 .btNovaTarefa {
-  display: block;
+  display: inline-block;
   margin-left: 20px;
+  margin-right: 20px;
   padding: 10px;
   background-color: cornflowerblue;
   border-radius: 10px;

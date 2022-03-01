@@ -1,7 +1,16 @@
 <!-- Autor: Thiago de Moura Machado -->
 
 <!-- PHP session_start aqui -->
+<?php
 
+session_start();
+if (isset($_SESSION['logadoN']) && $_SESSION['logadoN'] == true) {
+    header("Location: ../index.php");
+}
+
+require_once '../controller/cLogin.php';
+$login = new cLogin();
+?>
 
 <!DOCTYPE html>
 <html>
@@ -16,16 +25,16 @@
 <div class="containerLogin">
         <div class="areaLogin">
             <h2 class="txtBranco">Login</h2>
-            <form>
+            <form action="<?php $login->login(); ?>" method="post">
                 <label class="txtBranco">
                     <b>Usuário:</b><br>
-                <input type="text" name="user"></label><br>
+                <input type="text" name="usuario"></label><br>
                 <br>
                 <label class="txtBranco">
                     <b>Senha:</b><br>
-                <input type="text" name="user"></label><br>
+                <input type="password" name="senha"></label><br>
                 <br>
-                <a href="index.html" target="_self" class="btLoginForm">Entrar</a>
+                <input type="submit" name="logar" value="Entrar" class="btLoginForm"/>
             </form>
             <p class="txtPadrao txtBranco">
                 <br>

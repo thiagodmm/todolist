@@ -22,8 +22,19 @@ $listaUser = $cadUser->getUsuarios();
 <div class="container">
 
         <div class="top">
-            <div class="topEsq"><h4 class="nomeUser">Olá Thiago</h4></div>
-            <div class="topDir"><a href="login.php" class="linkSair">Sair</a></div>
+            <div class="topEsq topLogado">
+
+            <?php
+        session_start();
+        if (isset($_SESSION['logadoN']) && $_SESSION['logadoN'] == true) {
+            echo " Olá " . $_SESSION['usuarioN'] . " | ";
+            echo "<button onclick=" . "location.href='controller/logout.php'" . ">Sair</button>";
+        } else {
+            header("Location: view/login.php");
+        }
+        ?>
+        <!--<h4 class="nomeUser">Olá Thiago</h4>--></div>
+            <div class="topDir"><!--<a href="login.php" class="linkSair">Sair</a>--></div>
         </div>
 
         <div class="titPrincipal">
@@ -58,14 +69,14 @@ $listaUser = $cadUser->getUsuarios();
         <tbody>
             <?php foreach ($listaUser as $user): ?>
                 <tr style="background-color: white;">
-                    <td style="padding: 10px;">
+                    <td style="padding: 10px; text-align: center">
                         <?php echo $user['iduser']; ?>
                     </td>
-                    <td style="padding: 10px;">
+                    <td style="padding: 10px; text-align: center">
                         <?php echo $user['usuario']; ?>
                     </td>
 
-                    <td style="padding: 10px;">
+                    <td style="padding: 10px; text-align: center">
 
                     <form action="../controller/deletarUser.php" method="post">
                             <input type="hidden" value="<?php echo $user['iduser']; ?>" name="iduser">
