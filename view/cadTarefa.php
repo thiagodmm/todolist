@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 
 <?php
- require_once '../controller/cUsuario.php';
- $cadUser = new cUsuario();
+ require_once '../controller/cTarefa.php';
+ $cadTar = new cTarefa();
 ?>
 
 <html>
@@ -13,10 +13,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../estilos.css">
-    <title>Cadastrar Novo Usuário - Projeto To-Do List</title>
+    <title>Cadastrar Nova Tarefa - Projeto To-Do List</title>
 
 </head>
 <body>
+
+<form method="post" action="<?php $cadTar->novaTarefa(); ?>">
 
 <div class="container">
 
@@ -34,7 +36,7 @@
         ?>
             
             <!--<h4 class="nomeUser">Olá Thiago</h4>--></div>
-            <div class="topDir"><!--<a href="login.php" class="linkSair">Sair</a>--></div>
+            <div class="topDir"><!--<a href="login.html" class="linkSair">Sair</a>--></div>
         </div>
 
         <div class="titPrincipal">
@@ -44,31 +46,33 @@
 
         <div class="botaoPrincipal">
 
-            <h3>Cadastrar Novo Usuário</h3>
+            <h3>Cadastrar Nova Tarefa</h3>
 
             <a href="../index.php" target="_self">Voltar para Home</a><br>
             <br>
-            <a href="cadTarefa.php" target="_self">Cadastro de Tarefa</a><br>
+            <a href="cadUsuario.php" target="_self">Cadastro de Usuário</a><br>
             <br>
             <a href="listaUsuarios.php" target="_self">Lista de Usuários</a><br>
             <br>
 
-            <!-- Formulário de cadastro novo usuário -->
+            <!-- Formulário de cadastro nova tarefa -->
 
-            <form method="post" action="<?php $cadUser->inserir(); ?>">
+            <form method="post" action="<?php $cadTar->novaTarefa(); ?>">
 
-            <input type="hidden" name="iduser">
+            <input type="hidden" name="idtarefa">
+            <input type="hidden" name="finalizada" value="não" placeholder="não">
 
-            <label>Usuário: <input type="text" name="usuario"></label><br>
+            <label>Título da Tarefa: <input type="text" name="titulo" value="Título aqui"></label><br>
             <br>
-            <label>Senha: <input type="password" name="senha"></label><br>
+            
+            <label>Data Limite: <input type="date" name="datalimite"></label><br>
             <br>
-            <input type="submit" name="salvar" value="Cadastrar Usuário" class="btCadTarefa"><br>
+            <input type="submit" name="cadastrar" value="Cadastrar Tarefa" class="btCadTarefa"><br>
             <br>
+            <!--<a href="#" target="_self" class="btCadTarefa">Cadastrar Tarefa</a>--><br>
             <br>
-
+            </form>
         </div>
-
 
         <div class="footer">
             <div class="footerEsq"><p class="assinaSenac"><small>2022 Senac Tech TDS</small></p></div>
@@ -77,6 +81,7 @@
 
     </div>
 
+</form>
 
 </body>
 </html>

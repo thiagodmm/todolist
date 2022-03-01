@@ -50,6 +50,8 @@ $listaUser = $cadUser->getUsuarios();
             <br>
             <a href="cadUsuario.php" target="_self">Cadastro de Usuário</a><br>
             <br>
+            <a href="cadTarefa.php" target="_self">Cadastro de Tarefa</a><br>
+            <br>
 
         </div>
 

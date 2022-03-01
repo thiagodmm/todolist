@@ -171,31 +171,30 @@ textarea {
 }
 
 .tarefasAbertas {
-  margin: 10px;
+  margin: 15px;
   padding: 15px;
-  float: left;
   border-radius: 10px;
   display: block;
-  width: 48%;
+  width: 100%;
   background-color: dodgerblue;
 }
 
 .tarefasFechadas {
-  margin: 10px;
+  margin: 15px;
   padding: 15px;
   border-radius: 10px;
-  display: inline-block;
-  width: 48%;
+  display: block;
+  width: 100%;
   background-color: lightslategray;
 }
 
 .tarefas10dias {
-  display: block;
-  margin: auto;
+  display: inline-block;
+  margin: 15px;
   padding: 15px;
   border-radius: 10px;
   display: block;
-  width: 70%;
+  width: 100%;
   background-color: rgb(110, 163, 209);
 }
 

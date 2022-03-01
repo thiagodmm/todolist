@@ -1,7 +1,11 @@
 <!-- Autor: Thiago de Moura Machado -->
 <!DOCTYPE html>
 
-<!-- PHP session_start aqui -->
+<?php
+require_once 'controller/cTarefa.php';
+$cadTar = new cTarefa();
+$listaTarefas = $cadTar->getTarefas();
+?>
 
 
 <html>
@@ -39,37 +43,47 @@
     </div>
 
     <div class="botaoPrincipal">
-      <a href="html/nova_tarefa.html" target="_self" class="btNovaTarefa">Nova Tarefa</a>
+      <a href="view/cadTarefa.php" target="_self" class="btNovaTarefa">Nova Tarefa</a>
       <a href="view/cadUsuario.php" target="_self" class="btNovaTarefa">Novo Usuário</a>
       <a href="view/listaUsuarios.php" target="_self" class="btNovaTarefa">Lista de Usuários</a>
     </div>
 
       <div class="content">
         <div class="tarefasAbertas">
-        <h3 class="txtBranco">Tarefas a fazer</h3>
+        <h3 class="txtBranco">Tarefas em aberto</h3>
           <div class="toDoListcontent">
-            <table style="width:100%">
-              <tr>
-                <td><b>Título da Tarefa</b></td>
-                <td><b>Data Limite</b></td>
-                <td><b>Ações</b></td>
-              </tr>
-              <tr>
-                <td>Construir o Banco de Dados</td>
-                <td>24/02/2022</td>
-                <td><a href="#">Finalizada</a></td>
-              </tr>
-              <tr>
-                <td>Iniciar o Front-End</td>
-                <td>25/02/2022</td>
-                <td><a href="#">Finalizada</a></td>
-              </tr>
-              <tr>
-                <td>Concluir o CRUD PHP</td>
-                <td>26/02/2022</td>
-                <td><a href="#">Finalizada</a></td>
-              </tr>
-            </table>
+
+
+
+          <table style="width:100%">
+        <thead>
+            <tr style="background-color: gray; color: white;">
+                <th style="padding: 5px;">Id</th>
+                <th style="padding: 5px;">Título</th>
+                <th style="padding: 5px;">Data Limite</th>
+                <th style="padding: 5px;">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($listaTarefas as $cadTar): ?>
+                <tr style="background-color: white;">
+                    <td style="padding: 10px; text-align: center">
+                        <?php echo $cadTar['idtarefa']; ?>
+                    </td>
+                    <td style="padding: 10px; text-align: center">
+                        <?php echo $cadTar['titulo']; ?>
+                    </td>
+                    <td style="padding: 10px; text-align: center">
+                        <?php echo $cadTar['datalimite']; ?>
+                    </td>
+                    <td style="padding: 10px; text-align: center">
+                      <a href="#">Finalizar Tarefa</a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+
           </div>
         </div>
 
@@ -97,9 +111,15 @@
         </div>
         </div>
 
-      <hr>
+      <hr style="display:block; margin-top: 10px; margin-bottom:10px">
 
-      <div class="tarefas10dias">
+      
+
+    </div>
+
+    <div class="content">
+
+    <div class="tarefas10dias">
         <h3 class="txtBranco">Tarefas abertas a mais de 10 dias</h3>
           <div class="toDoListcontent">
             <table style="width:100%">
@@ -111,17 +131,17 @@
               <tr>
                 <td>Construir o Banco de Dados</td>
                 <td>24/01/2022</td>
-                <td><a href="#">Finalizada</a></td>
+                <td><a href="#">Finalizar Tarefa</a></td>
               </tr>
               <tr>
                 <td>Iniciar o Front-End</td>
                 <td>25/01/2022</td>
-                <td><a href="#">Finalizada</a></td>
+                <td><a href="#">Finalizar Tarefa</a></td>
               </tr>
               <tr>
                 <td>Concluir o CRUD PHP</td>
                 <td>26/01/2022</td>
-                <td><a href="#">Finalizada</a></td>
+                <td><a href="#">Finalizar Tarefa</a></td>
               </tr>
             </table>
           </div>
