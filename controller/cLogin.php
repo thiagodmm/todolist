@@ -29,7 +29,7 @@ class cLogin {
                     header("Location: ../index.php");
                 }
             }else {
-                header("Location: view/login.php");
+                header("Location: ../view/login.php");
             }
             unset($sth);
             unset($pdo);

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 01-Mar-2022 às 02:43
+-- Tempo de geração: 01-Mar-2022 às 20:58
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.0.13
 
@@ -47,6 +47,19 @@ CREATE TABLE `tarefas` (
   `idtarefa` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Extraindo dados da tabela `tarefas`
+--
+
+INSERT INTO `tarefas` (`titulo`, `datalimite`, `finalizada`, `idtarefa`) VALUES
+('Primeira Tarefa', '0000-00-00', 'não', 1),
+('Finalizar o Projeto To-Do List', '0000-00-00', 'não', 2),
+('Terceira Tarefa', '0000-00-00', 'não', 3),
+('Quarta Tarefa', '0000-00-00', 'não', 4),
+('Teste Editando a Data', '0000-00-00', 'não', 5),
+('Teste de Data', '0000-00-00', 'não', 6),
+('Nova Tarefa Data', '0000-00-00', 'não', 13);
+
 -- --------------------------------------------------------
 
 --
@@ -65,11 +78,11 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`iduser`, `usuario`, `senha`, `perfilAcesso`) VALUES
-(11, 'David', '$2y$10$lrgfxzlPJrM2nyZxqKYPP.pyRZJsGxY.bjltZOLo8pG6waYncnT1q', ''),
 (12, 'King', '$2y$10$ph5tpKOPiX8PaRODk.RDLuVPsRdA6idBT6yfLeuCEBYgzpCOFz6we', ''),
 (13, 'Andy', '$2y$10$7opEOPSOMgI1BL2SNR4MNeL/28jbLwzpVcpfXSccWunHgkm55dXZi', ''),
 (14, 'Mikkey', '$2y$10$atDI1sx7CpdiTzhYS3ikx.Ch9dDZTzd85yWCmMrmcS2iHA1I3hG5C', ''),
-(15, 'Michael', '$2y$10$ywJL2r0Clq3IaocVvuycAOBOY.DEkmjo0GTkZ9ipDlM71BtqYOitm', '');
+(15, 'Michael', '$2y$10$ywJL2r0Clq3IaocVvuycAOBOY.DEkmjo0GTkZ9ipDlM71BtqYOitm', ''),
+(16, 'thiago', '$2y$10$qvU8OWX4yy2/VfE6O5BwO.G/6dHEYab9MBUhIW.CIzQM9grBO0NMC', '');
 
 --
 -- Índices para tabelas despejadas
@@ -103,13 +116,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de tabela `tarefas`
 --
 ALTER TABLE `tarefas`
-  MODIFY `idtarefa` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idtarefa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de tabela `user`
 --
 ALTER TABLE `user`
-  MODIFY `iduser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `iduser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

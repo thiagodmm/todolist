@@ -19,7 +19,7 @@ class cTarefa {
             $sth = $pdo->prepare($sql);
             // $sth->execute([$nome,$email,$pas]);
             $sth->bindParam(1, $titulo, PDO::PARAM_STR);
-            $sth->bindParam(2, $data, PDO::PARAM_STR);
+            $sth->bindParam(2, $datalimite, PDO::PARAM_STR);
             $sth->bindParam(2, $finalizada, PDO::PARAM_STR);
             $sth->execute();
             unset($pdo);
