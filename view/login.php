@@ -34,13 +34,16 @@ $login = new cLogin();
                     <b>Senha:</b><br>
                 <input type="password" name="senha"></label><br>
                 <br>
-                <input type="submit" name="logar" value="Entrar" class="btLoginForm"/>
+                <input type="submit" name="logar" value="Entrar" class="btLoginForm"/><br>
+                <br>
             </form>
+            <!--
             <p class="txtPadrao txtBranco">
                 <br>
                 Ainda não possui usuário e senha?<br>
                 <br>
-                | <a href="../view/cadUsuario.php" class="linkBranco">Cadastrar Novo Usuário</a> |</p>
+                <a href="../view/cadUsuario.php" class="linkBranco">Cadastrar Novo Usuário</a> |</p>
+            -->
         </div>
     </div>
 </body>
