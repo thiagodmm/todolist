@@ -23,6 +23,9 @@ $login = new cLogin();
 </head>
 <body>
 <div class="containerLogin">
+
+        <img src="../img/logo_tds_login.png" class="logoLog">
+
         <div class="areaLogin">
             <h2 class="txtBranco">Login</h2>
             <form action="<?php $login->login(); ?>" method="post">

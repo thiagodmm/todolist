@@ -39,6 +39,20 @@ textarea {
   padding: 8px;
 }
 
+.logoLog {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.logoPeq {
+  display: block;
+  margin: auto;
+  margin-top: 6px;
+  margin-right: 6px;
+}
+
 .topLogado {
   padding-top: 10px;
   padding-left: 10px;

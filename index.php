@@ -34,7 +34,7 @@ $listaTarefas = $cadTar->getTarefas();
         ?>
 
 <!--<h4 class="nomeUser">Olá Thiago</h4>--></div>
-      <div class="topDir"><!--<a href="view/login.php" class="linkSair">Sair</a>--></div>
+      <div class="topDir"><img src="img/logo_tds_bra.png" class="logoPeq"><!--<a href="view/login.php" class="linkSair">Sair</a>--></div>
     </div>
 
     <div class="titPrincipal">
