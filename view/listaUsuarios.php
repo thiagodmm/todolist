@@ -83,8 +83,9 @@ $listaUser = $cadUser->getUsuarios();
                     <form action="../controller/deletarUser.php" method="post">
                             <input type="hidden" value="<?php echo $user['iduser']; ?>" name="iduser">
                             <input type="submit" value="Deletar" name="deletar" style="background-color: orange; border-color: red; color: white; cursor: pointer; width:100px; padding: 5px; margin: 5px;">
-
-                        </form>
+                    </form>
+                    
+                        
 
                     </td>
                 </tr>

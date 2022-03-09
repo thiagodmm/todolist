@@ -38,7 +38,7 @@ $listaTarefas = $cadTar->getTarefas();
     </div>
 
     <div class="titPrincipal">
-      <h1 class="titProj"><small>Projeto</small><br>
+      <h1 class="titProj"><small class="txtBranco">Projeto</small><br>
       TO-DO LIST</h1>
     </div>
 
